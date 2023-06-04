@@ -1,17 +1,14 @@
-// #include <Wigner.hpp>
-
-#include "Wigner/Core/Application.hpp"
-#include "Wigner/Core/Entrypoint.hpp"
+#include <Badger.hpp>
 
 #include <iostream>
 
-class Testbed : public Wigner::Application {
+class Testbed : public Badger::Application {
     public:
-        Testbed() {}
+        Testbed() { CX_DEBUG("Hello from the Testbed!"); }
         ~Testbed() {}
     private:
 };
 
-Wigner::Application *Wigner::CreateApplication() {
-    return new Testbed();
+std::unique_ptr<Badger::Application> Badger::CreateApplication() {
+    return std::make_unique<Testbed>();
 }

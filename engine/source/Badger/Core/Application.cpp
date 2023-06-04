@@ -1,12 +1,10 @@
-#include "Wigner/Core/Application.hpp"
+#include "Badger/Core/Application.hpp"
 
 #include "glad/glad.h"
-
 #include <iostream>
 
-namespace Wigner
-{
-    Application::Application() {}
+namespace Badger {
+    Application::Application() { CX_DEBUG("Hello from the Application!"); }
     Application::~Application() {}
     
     bool Application::Run() {

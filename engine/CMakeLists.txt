@@ -1,7 +1,7 @@
 project(
-    Wigner
+    Badger
     VERSION 0.1
-    DESCRIPTION "Wigner Engine"
+    DESCRIPTION "Badger Engine"
     LANGUAGES C CXX
 )
 
@@ -28,6 +28,10 @@ set(
 
 set(
     LOCAL_HEADERS
+    ${PROJECT_SOURCE_DIR}/source/${PROJECT_NAME}/Base/Defines.hpp
+    ${PROJECT_SOURCE_DIR}/source/${PROJECT_NAME}/Base/Asserts.hpp
+    ${PROJECT_SOURCE_DIR}/source/${PROJECT_NAME}/Base/Logging.hpp
+    ${PROJECT_SOURCE_DIR}/source/${PROJECT_NAME}/Base/Base.hpp
 
     ${PROJECT_SOURCE_DIR}/source/${PROJECT_NAME}/Core/Entrypoint.hpp
     ${PROJECT_SOURCE_DIR}/source/${PROJECT_NAME}/Core/Application.hpp
@@ -35,6 +39,7 @@ set(
 
 set(
     LOCAL_SOURCES
+    ${PROJECT_SOURCE_DIR}/source/${PROJECT_NAME}/Base/Logging.cpp
 
     ${PROJECT_SOURCE_DIR}/source/${PROJECT_NAME}/Core/Application.cpp
 )
